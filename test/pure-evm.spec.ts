@@ -162,7 +162,7 @@ describe("Pure evm with view function", () => {
       "recover",
       output
     );
-    const evmDecoded = defaultAbiCoder.decode(["address"], outputValues[0]);
+    const evmDecoded = outputValues[0];
 
     // Execute on contract, decode output
     const [addr] = await simpleRecover.functions.recover(sig, digest);
